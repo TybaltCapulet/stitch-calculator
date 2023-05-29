@@ -5,7 +5,7 @@ import { Picker } from '@react-native-picker/picker';
 const Calculator = () => {
   const [totalLength, setTotalLength] = useState('');
   const [holeCount, setHoleCount] = useState('');
-  const [stitchSize, setStitchSize] = useState('5');
+  const [stitchSize, setStitchSize] = useState('');
   const [itemThickness, setItemThickness] = useState('');
   const [finishThreadLength, setFinishThreadLength] = useState('');
   const [totalThreadLength, setTotalThreadLength] = useState('');
@@ -44,7 +44,7 @@ const Calculator = () => {
           <Text style={styles.text}>Hole Count</Text>
           <TextInput style={styles.input} placeholder="Hole Count" value={holeCount} onChangeText={setHoleCount} />
           <Text style={styles.text}> SPI (mm)</Text>
-          <Picker style={styles.picker} selectedValue={stitchSize} onValueChange={setStitchSize}>
+          <Picker mode='dropdown' style={styles.picker} selectedValue={stitchSize} onValueChange={setStitchSize}>
             <Picker.Item label="5 (5.2mm)" value="5.2" />
             <Picker.Item label="6 (4.3mm)" value="4.3" />
             <Picker.Item label="7 (3.85mm)" value="3.85" />
@@ -54,7 +54,7 @@ const Calculator = () => {
             <Picker.Item label="11 (2.45mm)" value="2.45" />
             <Picker.Item label="12 (2.3mm)" value="2.3" />
           </Picker>
-          <Text style={styles.text}>Thickness of Item to be Stitched</Text>
+          <Text style={styles.text}>Thickness of Item to be Stitched (mm)</Text>
           <TextInput style={styles.input} placeholder="Thickness of Item to be Stitched (mm)" value={itemThickness} onChangeText={setItemThickness} />
           <Text style={styles.text}>Length of Finishing Thread (mm)</Text>
           <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200"/>
@@ -120,3 +120,5 @@ const styles = StyleSheet.create({
 });
 
 export default Calculator;
+
+

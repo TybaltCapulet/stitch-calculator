@@ -93,3 +93,16 @@ Number of holes/Length of stitching (mm)
 
 SPI Conversion chart
 Link to the courses
+
+Basics created:
+
+Need: 
+Error handling
+Two different tabs?
+Disable buttons if all info isn't available
+Allow app to be shared.
+Styling
+Link logo to website
+Tooltips?
+App icon
+Splash Screen

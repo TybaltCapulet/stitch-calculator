@@ -18,7 +18,7 @@ const Calculator = () => {
     const holeCount = Math.round(parsedLength / parsedSPI);
     const hiddenLength = holeCount * parsedThickness;
     const threadLength = (parsedLength + hiddenLength + parsedFinishThreadLength) * 2;
-    setTotalThreadLength(Math.round(threadLength).toString());
+    setTotalThreadLength(Math.round(threadLength).toString() + 'mm');
   };
 
   const calculateHoleCount = () => {
@@ -62,7 +62,11 @@ const Calculator = () => {
             <Button marginBottom='20px' color="green" title="Calculate Based on Length" onPress={calculateLength} />
             <Button title="Calculate Based on Hole Count" onPress={calculateHoleCount} />
           </View>
-          <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}mm</Text>
+          <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}</Text>
+          <Text style={styles.title}>Thread Length Calculator</Text>
+          <Text style={styles.title}>Thread Length Calculator</Text>
+          <Text style={styles.title}>Thread Length Calculator</Text>
+          <Text style={styles.title}>Thread Length Calculator</Text>
         </View>
       </ScrollView>
     </SafeAreaView>

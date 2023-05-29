@@ -1,0 +1,95 @@
+notes.txt
+
+What this app does:
+
+Thread length calculator for calculatiing needed amount of Thread
+
+Values taken: 
+
+Total length of stitching (How long the side of what you want to stitch is) (mm)
+Hole count
+Stitch size in SPI (mm in brackets) 
+    5 - 5.2mm
+    6 - 4.3mm
+    7 - 3.85mm
+    8 - 3.38mm
+    9 - 3mm
+    10 - 2.7mm
+    11 - 2.45mm
+    12 - 2.3mm
+Thickness of item to be stiched (mm)
+Length of Finishing thread (/How much you want leftover to work with)
+
+
+Two buttons 
+
+Calculate based on Length
+Calculate based on hole count
+
+Output of total thread length needed in mm
+
+Total length of stitching or hole count - only one is needed. If both are filled in then it will use the calculation depending on which button is pressed.
+
+There is another output of either number of holes or length of stitching
+
+If calculate based on length is used then it will display number of holes
+If calculate based on Hole Count is used, then it will display the length of stitching
+
+Calculations: 
+
+Based on length: 
+
+Stitch length = Total length of stitch line * 2
+Hole count = Total length of stitch line / stitch size(mm)
+InternalLength = Hole count /* Thickness
+Finishing = length of finishing * 2
+
+100
+100/3.85 = 26
+3 * 26 = 78
+100
+
+Double all = 200+200+156 > correct
+
+Based on hole count 
+
+Stitch length = hole count * stitch size 
+internal = hole count * Thickness
+Finishing = finishing
+
+26*3.85 = 100
+26*3 = 78
+100
+
+278*2 > correct
+
+Layout:
+
+App icon
+Splash screen
+Menu?
+Choice between calculators?
+
+No Choice
+
+Total Length of Stitching > number input (mm)
+Hole Count > number input
+Stitch size > SPI (mm) > picker
+Thickness > number input (mm)
+Length of Finishiing thread > Number input (mm) > Placeholder of 200mm
+
+
+Buttons:
+
+Calculate based on length
+Calculate based on Hole Count
+
+
+Output: 
+
+Total length of thread needed:
+
+Number of holes/Length of stitching (mm)
+
+SPI Conversion chart
+Link to the courses

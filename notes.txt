@@ -104,5 +104,7 @@ Allow app to be shared.
 Styling
 Link logo to website
 Tooltips?
-App icon
-Splash Screen
+Make inputs number only
+Set default SPI to 7
+Put logo in header
+

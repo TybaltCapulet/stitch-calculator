@@ -97,7 +97,5 @@ Link to the courses (About us page)
 Need: 
 Allow app to be shared.
 Styling
-Link logo to website
 Tooltips?
-Add SPI conversion chart, Help, Courses
-
+Courses

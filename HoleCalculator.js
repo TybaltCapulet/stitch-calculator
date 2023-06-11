@@ -11,18 +11,7 @@ const HoleCalculator = () => {
     const [itemThickness, setItemThickness] = useState('');
     const [finishThreadLength, setFinishThreadLength] = useState('');
     const [totalThreadLength, setTotalThreadLength] = useState('');
-  
-    const calculateLength = () => {
-      const parsedLength = parseFloat(totalLength);
-      const parsedSPI = parseFloat(stitchSize);
-      const parsedThickness = parseFloat(itemThickness);
-      const parsedFinishThreadLength = parseFloat(finishThreadLength);
-      const holeCount = Math.round(parsedLength / parsedSPI);
-      const hiddenLength = holeCount * parsedThickness;
-      const threadLength = (parsedLength + hiddenLength + parsedFinishThreadLength) * 2;
-      setTotalThreadLength(Math.round(threadLength).toString() + 'mm');
-    };
-  
+    
     const calculateHoleCount = () => {
       const parsedSPI = parseFloat(stitchSize);
       const parsedThickness = parseFloat(itemThickness);
@@ -41,9 +30,7 @@ const HoleCalculator = () => {
           <View style={styles.container}>
             <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
             <Text style={styles.title}>Thread Length Calculator</Text>
-            <Text style={styles.text}>Total Length of Stitching</Text>
-            <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} />
-            <Text style={styles.text}>Hole Count</Text>
+            <Text style={styles.text}>Hole Count (Number of Stitch Holes)</Text>
             <TextInput style={styles.input} placeholder="Hole Count" value={holeCount} onChangeText={setHoleCount} />
             <Text style={styles.text}> SPI (mm)</Text>
             <Picker style={styles.picker} selectedValue={stitchSize} onValueChange={setStitchSize}>
@@ -61,7 +48,6 @@ const HoleCalculator = () => {
             <Text style={styles.text}>Length of Finishing Thread (mm)</Text>
             <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200"/>
             <View style={styles.buttonContainer}>
-              <Button marginBottom='20px' color="green" title="Calculate Based on Length" onPress={calculateLength} />
               <Button title="Calculate Based on Hole Count" onPress={calculateHoleCount} />
             </View>
             <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}</Text>

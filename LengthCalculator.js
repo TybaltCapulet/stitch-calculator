@@ -1,4 +1,4 @@
-// CalculatorPage.js
+// LengthCalculator.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollView } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
@@ -23,17 +23,6 @@ const LengthCalculator = () => {
       setTotalThreadLength(Math.round(threadLength).toString() + 'mm');
     };
   
-    const calculateHoleCount = () => {
-      const parsedSPI = parseFloat(stitchSize);
-      const parsedThickness = parseFloat(itemThickness);
-      const parsedHoleCount = parseFloat(holeCount);
-      const parsedFinishThreadLength = parseFloat(finishThreadLength);
-      const length = parsedHoleCount * parsedSPI;
-      const hiddenLength = parsedHoleCount * parsedThickness;
-      const threadLength = (length + hiddenLength + parsedFinishThreadLength) * 2;
-      setTotalThreadLength(Math.round(threadLength).toString());
-    };
-  
   
     return (
       <SafeAreaView style={styles.container}>
@@ -43,8 +32,6 @@ const LengthCalculator = () => {
             <Text style={styles.title}>Thread Length Calculator</Text>
             <Text style={styles.text}>Total Length of Stitching</Text>
             <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} />
-            <Text style={styles.text}>Hole Count</Text>
-            <TextInput style={styles.input} placeholder="Hole Count" value={holeCount} onChangeText={setHoleCount} />
             <Text style={styles.text}> SPI (mm)</Text>
             <Picker style={styles.picker} selectedValue={stitchSize} onValueChange={setStitchSize}>
               <Picker.Item label="5 (5.2mm)" value="5.2" />
@@ -62,7 +49,6 @@ const LengthCalculator = () => {
             <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200"/>
             <View style={styles.buttonContainer}>
               <Button marginBottom='20px' color="green" title="Calculate Based on Length" onPress={calculateLength} />
-              <Button title="Calculate Based on Hole Count" onPress={calculateHoleCount} />
             </View>
             <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}</Text>
           </View>

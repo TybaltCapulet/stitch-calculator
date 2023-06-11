@@ -95,11 +95,9 @@ SPI Conversion chart
 Link to the courses (About us page)
 
 Need: 
-Error handling
-Disable buttons if all info isn't available
 Allow app to be shared.
 Styling
 Link logo to website
 Tooltips?
-Add SPI conversion chart, Help
+Add SPI conversion chart, Help, Courses
 

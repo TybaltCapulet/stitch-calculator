@@ -10,19 +10,11 @@ const AboutPage = () => {
             <ScrollView>
                 <View style={styles.container}>
                     <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
-                    <Text style={styles.title}>Calculate Thread Length When Saddle Stitching</Text>  
-                    <Text>Calculate How much Thread you need when Saddle Stitching. Never run out again. However long or thick your item is.</Text>
-                    <Text>Calculating the amount of thread you need when Saddle Stitching to be able to stitch a specific item correctly can be problematic, and if you get it wrong, disastrous.
-                    {'\n'}
-                        Advice that is often given ranges from x4 to x10 often with little consideration of what SPI is being used or the thickness of the item being stitched.
-                    {'\n'}
-                        It seems to be mostly guesswork, which is never a good thing. So some years ago, I created a simple formula to help you avoid that most horrendous of games… ‘Thread Chicken’. Never Run Out Again!
-                        {'\n'}
-                        This is a much used, tried, tested and above all reliable method to help you with your stitching.
-                        {'\n'}
-                        It has been available on Nigel Armitage’s website for some time as a free download and still is.
-                        Now you have a new option, an actual calculator, one that will help you get the correct thread length, every time!
-                        All you need to do is to put in your numbers.</Text>
+                    <Text style={styles.title}>About this app</Text>  
+                    <Text>This app was created to help people calculate the necessary length of thread when saddle stitching, instead of relying on guesswork.{'\n'}</Text>
+                    <Text>Nigel Armitage provided the original calculator on his website and sponsored the building of this app by Henry Rackley.{'\n'}</Text>
+                    <Text>With thanks to Graham of White Star Leather who wrote the original version of the calculator in Jquery on secretsfromtheworkshop.com{'\n'}</Text>
+                    <Text>Please contact Armitage Leather if you have any feedback or suggestions on how to improve the app via nigel@armitageleather.com{'\n'}</Text>
                 </View>
             </ScrollView>
         </SafeAreaView>

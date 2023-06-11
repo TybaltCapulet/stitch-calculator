@@ -47,7 +47,11 @@ const styles = StyleSheet.create({
     },
     safeAreaViewStyles: {
         backgroundColor: 'aliceblue',
+    },
+    boldText: {
+        fontWeight: 'bold',
     }
+
   });
 
 export default styles;

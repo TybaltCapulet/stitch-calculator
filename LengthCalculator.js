@@ -1,6 +1,6 @@
 // LengthCalculator.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollView, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
 
@@ -13,6 +13,10 @@ const LengthCalculator = () => {
     const [totalThreadLength, setTotalThreadLength] = useState('');
   
     const calculateLength = () => {
+    if (!totalLength || !itemThickness) {
+        Alert.alert('Oops!', 'Please provide values for Total Length and Item Thickness.');
+        return;
+        }
       const parsedLength = parseFloat(totalLength);
       const parsedSPI = parseFloat(stitchSize);
       const parsedThickness = parseFloat(itemThickness);

@@ -1,6 +1,6 @@
 // HoleCalculatorPage.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollView, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
 
@@ -13,6 +13,10 @@ const HoleCalculator = () => {
     const [totalThreadLength, setTotalThreadLength] = useState('');
     
     const calculateHoleCount = () => {
+    if (!holeCount || !itemThickness) {
+        Alert.alert('Oops', 'Please provide values for Hole Count and Item Thickness.');
+        return;
+    }
       const parsedSPI = parseFloat(stitchSize);
       const parsedThickness = parseFloat(itemThickness);
       const parsedHoleCount = parseFloat(holeCount);

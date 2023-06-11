@@ -92,19 +92,14 @@ Total length of thread needed:
 Number of holes/Length of stitching (mm)
 
 SPI Conversion chart
-Link to the courses
-
-Basics created:
+Link to the courses (About us page)
 
 Need: 
 Error handling
-Two different tabs?
 Disable buttons if all info isn't available
 Allow app to be shared.
 Styling
 Link logo to website
 Tooltips?
-Make inputs number only
-Set default SPI to 7
-Put logo in header
+Add SPI conversion chart, Help
 

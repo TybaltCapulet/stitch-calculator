@@ -7,7 +7,7 @@ import styles from './styles';
 const LengthCalculator = () => {
     const [totalLength, setTotalLength] = useState('');
     const [holeCount, setHoleCount] = useState('');
-    const [stitchSize, setStitchSize] = useState('5');
+    const [stitchSize, setStitchSize] = useState('3.85');
     const [itemThickness, setItemThickness] = useState('');
     const [finishThreadLength, setFinishThreadLength] = useState('');
     const [totalThreadLength, setTotalThreadLength] = useState('');
@@ -16,7 +16,7 @@ const LengthCalculator = () => {
       const parsedLength = parseFloat(totalLength);
       const parsedSPI = parseFloat(stitchSize);
       const parsedThickness = parseFloat(itemThickness);
-      const parsedFinishThreadLength = parseFloat(finishThreadLength);
+      const parsedFinishThreadLength = finishThreadLength === '0' ? 0 : parseFloat(finishThreadLength) || 200;
       const holeCount = Math.round(parsedLength / parsedSPI);
       const hiddenLength = holeCount * parsedThickness;
       const threadLength = (parsedLength + hiddenLength + parsedFinishThreadLength) * 2;
@@ -30,8 +30,8 @@ const LengthCalculator = () => {
           <View style={styles.container}>
             <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
             <Text style={styles.title}>Thread Length Calculator</Text>
-            <Text style={styles.text}>Total Length of Stitching</Text>
-            <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} />
+            <Text style={styles.text}>Total Length of Stitching (mm)</Text>
+            <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} keyboardType="numeric"/>
             <Text style={styles.text}> SPI (mm)</Text>
             <Picker style={styles.picker} selectedValue={stitchSize} onValueChange={setStitchSize}>
               <Picker.Item label="5 (5.2mm)" value="5.2" />
@@ -43,10 +43,10 @@ const LengthCalculator = () => {
               <Picker.Item label="11 (2.45mm)" value="2.45" />
               <Picker.Item label="12 (2.3mm)" value="2.3" />
             </Picker>
-            <Text style={styles.text}>Thickness of Item to be Stitched</Text>
-            <TextInput style={styles.input} placeholder="Thickness of Item to be Stitched (mm)" value={itemThickness} onChangeText={setItemThickness} />
+            <Text style={styles.text}>Thickness of Item to be Stitched (mm)</Text>
+            <TextInput style={styles.input} placeholder="Thickness of Item to be Stitched (mm)" value={itemThickness} onChangeText={setItemThickness} keyboardType="numeric"/>
             <Text style={styles.text}>Length of Finishing Thread (mm)</Text>
-            <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200"/>
+            <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200" keyboardType="numeric"/>
             <View style={styles.buttonContainer}>
               <Button marginBottom='20px' color="green" title="Calculate Based on Length" onPress={calculateLength} />
             </View>

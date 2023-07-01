@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollView, Alert } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
+import Footer from './Footer';
 
 const HoleCalculator = () => {
     const [totalLength, setTotalLength] = useState('');
@@ -55,6 +56,7 @@ const HoleCalculator = () => {
               <Button title="Calculate Based on Hole Count" onPress={calculateHoleCount} />
             </View>
             <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}</Text>
+            <Footer />
           </View>
         </ScrollView>
       </SafeAreaView>

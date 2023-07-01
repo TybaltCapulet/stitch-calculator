@@ -3,6 +3,7 @@ import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from './styles'
 import OpenLinkButton from './OpenLinkButton';
+import Footer from './Footer';
 
 
 const Courses = () => {
@@ -17,6 +18,7 @@ Nigel not only provides the much needed information of how to undertake a techni
 Nigel embraces the traditional techniques whilst celebrating the modern, thereby, making leatherwork accessible and achievable for more people.{'\n'}{'\n'}
 Every level is catered for from Beginners just starting out, to the advanced Professional Leatherworker. {'\n'}</Text>
                 <OpenLinkButton/>
+                <Footer />
             </View>
         </ScrollView>
     </SafeAreaView>

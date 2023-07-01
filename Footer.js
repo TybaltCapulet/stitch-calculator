@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   footerContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#f5f5f5',
-    paddingVertical: 10,
+    paddingTop: 10,
+    paddingBottom: 3,
   },
   footerText: {
     fontSize: 12,

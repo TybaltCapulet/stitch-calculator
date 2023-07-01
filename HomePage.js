@@ -3,6 +3,7 @@ import React from 'react';
 import { View, Text, Image, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from './styles'
+import Footer from './Footer';
 
 
 const HomePage = () => {
@@ -27,6 +28,7 @@ const HomePage = () => {
                     It has been available on Nigel Armitage’s website for some time as a free download and still is.
                     Now you have a new option, an actual calculator, one that will help you get the correct thread length, every time!
                     All you need to do is to put in your numbers. Simply click on the menu on this app and choose whether to calculate by stitch length or number of holes</Text>
+                <Footer />
             </View>
         </ScrollView>
     </SafeAreaView>

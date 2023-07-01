@@ -99,3 +99,7 @@ Allow app to be shared.
 Styling
 Tooltips?
 Courses
+Add footer
+Make buttons custom
+Change thread output
+Dropdown instead of picker

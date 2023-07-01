@@ -55,8 +55,8 @@ const LengthCalculator = () => {
               <Button marginBottom='20px' color="green" title="Calculate Based on Length" onPress={calculateLength} />
             </View>
             <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}</Text>
-            <Footer />
           </View>
+          <Footer />
         </ScrollView>
     );
   };

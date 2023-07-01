@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
       flex: 1,
       padding: 25,
       backgroundColor: 'aliceblue',
-      borderColor: 'red',
-      borderWidth: 1,
+      // borderColor: 'red',
+      // borderWidth: 1,
     },
     title: {
       fontSize: 24,

@@ -16,12 +16,14 @@ const styles = StyleSheet.create({
   footerContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 10,
+    paddingTop: 20,
     paddingBottom: 3,
+    flex: 1,
   },
   footerText: {
     fontSize: 12,
     color: '#888',
+    flex: 1,
   },
 });
 

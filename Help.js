@@ -8,9 +8,8 @@ import Footer from './Footer';
 
 const HomePage = () => {
   return (
-    <SafeAreaView style={styles.container}>
-        <ScrollView>
-            <View style={styles.container}>
+        <ScrollView style={styles.container}>
+            <View>
                 <Text style={styles.title}>Need some help?</Text>
                 <Text>Below are some definitions to help you use the calculator{'\n'}</Text>
                 <Text><Text style={styles.boldText}>Total Length of Stitching: </Text>The total length that you are planning to stitch along, you can get this by measuring the leather or your pattern.{'\n'}</Text>
@@ -24,7 +23,6 @@ const HomePage = () => {
                 <Footer />            
             </View>
         </ScrollView>
-    </SafeAreaView>
   );
 };
 

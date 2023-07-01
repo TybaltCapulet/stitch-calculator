@@ -7,9 +7,8 @@ import Footer from './Footer';
 
 const AboutPage = () => {
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView>
-                <View style={styles.container}>
+            <ScrollView style={styles.container}>
+                <View>
                     <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
                     <Text style={styles.title}>About this app</Text>  
                     <Text>This app was created to help people calculate the necessary length of thread when saddle stitching, instead of relying on guesswork.{'\n'}</Text>
@@ -19,7 +18,6 @@ const AboutPage = () => {
                     <Footer />
                 </View>
             </ScrollView>
-        </SafeAreaView>
       );
     };
 

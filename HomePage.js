@@ -8,7 +8,6 @@ import Footer from './Footer';
 
 const HomePage = () => {
   return (
-    <SafeAreaView style={styles.container}>
         <ScrollView>
             <View style={styles.container}>
                 <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
@@ -31,7 +30,6 @@ const HomePage = () => {
                 <Footer />
             </View>
         </ScrollView>
-    </SafeAreaView>
   );
 };
 

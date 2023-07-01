@@ -30,9 +30,8 @@ const HoleCalculator = () => {
   
   
     return (
-      <SafeAreaView style={styles.container}>
-        <ScrollView>
-          <View style={styles.container}>
+        <ScrollView style={styles.container}>
+          <View>
             <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
             <Text style={styles.title}>Thread Length Calculator</Text>
             <Text style={styles.text}>Hole Count (Number of Stitch Holes)</Text>
@@ -59,7 +58,6 @@ const HoleCalculator = () => {
             <Footer />
           </View>
         </ScrollView>
-      </SafeAreaView>
     );
   };
   

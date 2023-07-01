@@ -5,11 +5,11 @@ import { View, Text, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Footer from './Footer';
 import { ScrollView } from 'react-native-gesture-handler';
+import styles from './styles';
 
 const SPItoMMTable = () => {
   return (
-    <SafeAreaView style={styles.container}>
-    <ScrollView>
+    <ScrollView style={styles.container}>
     <View>
         <Text>The SPI to millimetres is simple enough to find out by looking at your irons if they are modern. {'\n'}{'\n'}
 If you are stitching at 7 stitches per inch (SPI), the stitch length will be 3.85mm, this is the distance from centre of hole to centre of hole. {'\n'}{'\n'}
@@ -55,33 +55,7 @@ If however, you find your irons are not marked, here is a small guide to assist:
       <Footer />
       </View>
       </ScrollView>
-    </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 10,
-    padding: 20,
-    backgroundColor: 'aliceblue',
-  },
-  tableRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-  },
-  headerCell: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    flex: 1,
-  },
-  cell: {
-    fontSize: 16,
-    flex: 1,
-  },
-
-});
 
 export default SPItoMMTable;

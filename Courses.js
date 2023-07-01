@@ -8,9 +8,8 @@ import Footer from './Footer';
 
 const Courses = () => {
   return (
-    <SafeAreaView style={styles.container}>
-        <ScrollView>
-            <View style={styles.container}>
+        <ScrollView style={styles.container}>
+            <View>
                 <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
                 <Text style={styles.title}>Secrets From The Workshop Courses</Text>
                 <Text>Secrets from the Workshop is a dedicated instruction channel on Leathercraft for the discerning leatherworker. {'\n'}{'\n'}Filmed and presented by Nigel Armitage of Armitage Leather, it contains a host of videos to help you improve your leatherwork in a step by step style.
@@ -21,7 +20,6 @@ Every level is catered for from Beginners just starting out, to the advanced Pro
                 <Footer />
             </View>
         </ScrollView>
-    </SafeAreaView>
   );
 };
 

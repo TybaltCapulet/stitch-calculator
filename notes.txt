@@ -96,10 +96,8 @@ Link to the courses (About us page)
 
 Need: 
 Allow app to be shared.
-Styling - top padding ridiculousness
-Tooltips?
+Styling
 Courses
-Add footer
 Make buttons custom
 Change thread output
 Dropdown instead of picker

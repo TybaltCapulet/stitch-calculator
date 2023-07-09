@@ -52,7 +52,7 @@ const HoleCalculator = () => {
             <Text style={styles.text}>Thickness of Item to be Stitched</Text>
             <TextInput style={styles.input} placeholder="Thickness of Item to be Stitched (mm)" value={itemThickness} onChangeText={setItemThickness} keyboardType="numeric"/>
             <Text style={styles.text}>Length of Finishing Thread (mm)</Text>
-            <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200" keyboardType="numeric"/>
+            <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200mm (default)" defaultValue="200" keyboardType="numeric"/>
             <View style={styles.buttonContainer}>
               <CustomButton title="Calculate Based on Hole Count" onPress={calculateHoleCount} />
             </View>

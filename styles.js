@@ -4,7 +4,8 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      padding: 25,
+      paddingVertical: 25,
+      paddingHorizontal: 40,
       backgroundColor: 'aliceblue',
       // borderColor: 'red',
       // borderWidth: 1,
@@ -21,6 +22,8 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       marginBottom: 10,
       paddingLeft: 10,
+      backgroundColor: 'white',
+      fontSize: 12,
     },
     pickerContainer: {
       borderWidth: 1,
@@ -32,7 +35,7 @@ const styles = StyleSheet.create({
             backgroundColor: 'white',
           }
         : {
-            backgroundColor: 'transparent',
+            backgroundColor: 'white',
             paddingHorizontal: 10,
           }),
     },
@@ -42,6 +45,9 @@ const styles = StyleSheet.create({
     androidPicker: {
       height: 50,
       color: 'black',
+      backgroundColor: 'white',
+      borderWidth: 1,
+      borderColor: 'black',
     },
     buttonContainer: {
       flexDirection: 'column',
@@ -51,7 +57,7 @@ const styles = StyleSheet.create({
     },
     resultText: {
       fontSize: 18,
-      fontWeight: 'bold',
+      fontWeight: 'semibold',
       textAlign: 'center',
     },
     resultBox: {
@@ -61,10 +67,15 @@ const styles = StyleSheet.create({
       borderColor: 'black',
       borderWidth: 1,
       margin: 10,
+      backgroundColor: 'white',
+      borderRadius: 5,
+      width: '60%',
+      alignSelf: 'center',
     },
     text: {
-      fontSize: 16,
-      fontWeight: 'bold',
+      fontSize: 15,
+      fontWeight: 'semibold',
+      paddingVertical: 5,
     },
     buttons: {
       color: 'green',

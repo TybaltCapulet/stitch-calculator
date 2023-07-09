@@ -29,12 +29,21 @@ const styles = StyleSheet.create({
     buttonContainer: {
       flexDirection: 'column',
       justifyContent: 'center',
-      marginBottom: 20,
+      marginBottom: 10,
       padding: 10,
     },
     resultText: {
       fontSize: 18,
       fontWeight: 'bold',
+      textAlign: 'center',
+    },
+    resultBox: {
+      fontSize: 25,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      borderColor: 'black',
+      borderWidth: 1,
+      margin: 10,
     },
     text: {
       fontSize: 16,

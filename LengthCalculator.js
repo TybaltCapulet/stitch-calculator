@@ -4,6 +4,7 @@ import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollV
 import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
 import Footer from './Footer';
+import CustomButton from './CustomButton';
 
 const LengthCalculator = () => {
     const [totalLength, setTotalLength] = useState('');
@@ -52,9 +53,11 @@ const LengthCalculator = () => {
             <Text style={styles.text}>Length of Finishing Thread (mm)</Text>
             <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200" keyboardType="numeric"/>
             <View style={styles.buttonContainer}>
-              <Button marginBottom='20px' color="green" title="Calculate Based on Length" onPress={calculateLength} />
+              <CustomButton title="Calculate Based on Length" onPress={calculateLength} />
             </View>
-            <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}</Text>
+            <Text style={styles.resultText}>Total Thread Length Needed:</Text>
+            <Text style={styles.resultBox}> {totalThreadLength} </Text>
+
           </View>
           <Footer />
         </ScrollView>

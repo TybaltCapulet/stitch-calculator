@@ -4,6 +4,7 @@ import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollV
 import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
 import Footer from './Footer';
+import CustomButton from './CustomButton';
 
 const HoleCalculator = () => {
     const [totalLength, setTotalLength] = useState('');
@@ -25,7 +26,7 @@ const HoleCalculator = () => {
       const length = parsedHoleCount * parsedSPI;
       const hiddenLength = parsedHoleCount * parsedThickness;
       const threadLength = (length + hiddenLength + parsedFinishThreadLength) * 2;
-      setTotalThreadLength(Math.round(threadLength).toString());
+      setTotalThreadLength(Math.round(threadLength).toString() + 'mm' );
     };
   
   
@@ -52,9 +53,10 @@ const HoleCalculator = () => {
             <Text style={styles.text}>Length of Finishing Thread (mm)</Text>
             <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200" defaultValue="200" keyboardType="numeric"/>
             <View style={styles.buttonContainer}>
-              <Button title="Calculate Based on Hole Count" onPress={calculateHoleCount} />
+              <CustomButton title="Calculate Based on Hole Count" onPress={calculateHoleCount} />
             </View>
-            <Text style={styles.resultText}>Total Thread Length Needed: {totalThreadLength}</Text>
+            <Text style={styles.resultText}>Total Thread Length Needed:</Text>
+            <Text style={styles.resultBox}> {totalThreadLength} </Text>
             <Footer />
           </View>
         </ScrollView>

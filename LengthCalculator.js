@@ -38,7 +38,7 @@ const LengthCalculator = () => {
             <Text style={styles.text}>Total Length of Stitching (mm)</Text>
             <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} keyboardType="numeric"/>
             <Text style={styles.text}> SPI (mm)</Text>
-            <Picker style={styles.picker} selectedValue={stitchSize} onValueChange={setStitchSize}>
+            <Picker style={Platform.OS === 'ios' ? styles.iosPicker : styles.androidPicker} selectedValue={stitchSize} onValueChange={setStitchSize}>
               <Picker.Item label="5 (5.2mm)" value="5.2" />
               <Picker.Item label="6 (4.3mm)" value="4.3" />
               <Picker.Item label="7 (3.85mm)" value="3.85" />

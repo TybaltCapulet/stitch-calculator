@@ -22,9 +22,26 @@ const styles = StyleSheet.create({
       marginBottom: 10,
       paddingLeft: 10,
     },
-    picker: {
-      height: 50,
+    pickerContainer: {
+      borderWidth: 1,
+      borderColor: 'gray',
+      borderRadius: 5,
       marginBottom: 10,
+      ...(Platform.OS === 'ios'
+        ? {
+            backgroundColor: 'white',
+          }
+        : {
+            backgroundColor: 'transparent',
+            paddingHorizontal: 10,
+          }),
+    },
+    iosPicker: {
+      height: 50,
+    },
+    androidPicker: {
+      height: 50,
+      color: 'black',
     },
     buttonContainer: {
       flexDirection: 'column',

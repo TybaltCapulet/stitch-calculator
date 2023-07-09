@@ -5,6 +5,7 @@ import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
 import Footer from './Footer';
 import CustomButton from './CustomButton';
+import CustomPicker from './CustomPicker';
 
 const HoleCalculator = () => {
     const [totalLength, setTotalLength] = useState('');
@@ -38,7 +39,7 @@ const HoleCalculator = () => {
             <Text style={styles.text}>Hole Count (Number of Stitch Holes)</Text>
             <TextInput style={styles.input} placeholder="Hole Count" value={holeCount} onChangeText={setHoleCount} keyboardType="numeric" />
             <Text style={styles.text}> SPI (mm)</Text>
-            <Picker style={styles.picker} selectedValue={stitchSize} onValueChange={setStitchSize}>
+            <Picker style={Platform.OS === 'ios' ? styles.iosPicker : styles.androidPicker} selectedValue={stitchSize} onValueChange={setStitchSize}>
               <Picker.Item label="5 (5.2mm)" value="5.2" />
               <Picker.Item label="6 (4.3mm)" value="4.3" />
               <Picker.Item label="7 (3.85mm)" value="3.85" />

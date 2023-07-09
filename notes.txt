@@ -97,9 +97,9 @@ Link to the courses (About us page)
 Need: 
 Allow app to be shared.
 Styling
-Courses
-Make buttons custom
-Change thread output
 Dropdown instead of picker
-Changes on courses page
+Fix splash screen Image
+Footer not appearing
+
+
 

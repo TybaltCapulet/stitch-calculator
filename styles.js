@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
       ...(Platform.OS === 'ios'
         ? {
             backgroundColor: 'white',
+            marginVertical: 30
           }
         : {
             backgroundColor: 'white',
@@ -40,7 +41,12 @@ const styles = StyleSheet.create({
           }),
     },
     iosPicker: {
-      height: 50,
+      height: 200,
+      backgroundColor: 'white',
+      borderColor: 'black',
+      borderWidth: 1,
+      paddingBottom: 15,
+      marginBottom: 10
     },
     androidPicker: {
       height: 50,
@@ -71,6 +77,7 @@ const styles = StyleSheet.create({
       borderRadius: 5,
       width: '60%',
       alignSelf: 'center',
+      paddingVertical: 10
     },
     text: {
       fontSize: 15,

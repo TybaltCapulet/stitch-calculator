@@ -59,6 +59,8 @@ const HoleCalculator = () => {
             <Text style={styles.resultText}>Total Thread Length Needed:</Text>
             <Text style={styles.resultBox}> {totalThreadLength} </Text>
             <Footer />
+            <Text></Text>
+            <Text></Text>
           </View>
         </ScrollView>
     );

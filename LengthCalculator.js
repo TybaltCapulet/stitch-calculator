@@ -57,9 +57,10 @@ const LengthCalculator = () => {
             </View>
             <Text style={styles.resultText}>Total Thread Length Needed:</Text>
             <Text style={styles.resultBox}> {totalThreadLength} </Text>
-
           </View>
           <Footer />
+          <Text></Text>
+          <Text></Text>
         </ScrollView>
     );
   };

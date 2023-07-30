@@ -22,6 +22,8 @@ Nigel embraces the traditional techniques whilst celebrating the modern, thereby
                 <Text>In addition to the online channel, Nigel also offers face to face courses in his Staffordshire workshop.{'\n'}{'\n'}Every level is catered for from Beginners just starting out, to the advanced professional Leatherwork.{'\n'}{'\n'}Specific courses can be booked which range from Belts to Boxes.{'\n'}{'\n'}Custom courses can also be booked if you are looking at working on a specific technique or looking at development of a product.{'\n'}</Text>
                 <OpenFaceButton />
                 <Footer />
+                <Text></Text>
+                <Text></Text>
             </View>
         </ScrollView>
   );

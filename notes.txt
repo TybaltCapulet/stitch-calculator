@@ -98,7 +98,6 @@ Need:
 Allow app to be shared.
 Styling
 Dropdown instead of picker
-Footer not appearing
 
 
 

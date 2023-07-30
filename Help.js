@@ -20,7 +20,9 @@ const HomePage = () => {
                 <Text><Text style={styles.boldText}>Hole Count:</Text> The number of holes in total you will be stitching, you can count this up by simply counting the number of holes you're planning to stitch.{'\n'}</Text>
                 <Text><Text style={styles.boldText}>Thickness of Item to be stitched: </Text>The total thickness of the leather items you are stitching together in milimeters, for example, if you are stitching two pieces of leather together that are 1.5mm each, the total inputted into the calculator would be 3mm. {'\n'}</Text>
                 <Text><Text style={styles.boldText}>Length of Finish Thread: </Text>The amount of thread to ensure you have enough to finish comfortably and do any backstitching. The calculator has a default of 200mm which is good for most applications, but you can change this to anything you want. {'\n'}</Text>            
-                <Footer />            
+                <Footer />
+                <Text></Text>  
+                <Text></Text>   
             </View>
         </ScrollView>
   );

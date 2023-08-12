@@ -6,14 +6,16 @@ import styles from './styles'
 import Footer from './Footer';
 
 
+
 const HomePage = () => {
   return (
         <ScrollView style={styles.container}>
             <View>
+                <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
                 <Text style={styles.title}>Need some help?</Text>
                 <Text>Below are some definitions to help you use the calculator{'\n'}</Text>
-                <Text><Text style={styles.boldText}>Total Length of Stitching: </Text>The total length that you are planning to stitch along, you can get this by measuring the leather or your pattern.{'\n'}</Text>
-                <Text><Text style={styles.boldText}>SPI: </Text>SPI or Stitches Per Inch is a measure of how many holes you stitch per inch, with the equal conversion to milimeters. The SPI to millimetres is simple enough to find out by looking at your irons if they are modern.
+                <Text><Text style={styles.boldText}>Total Length of Stitching: </Text>{'\n'}The total length that you are planning to stitch, from the first hole, to the last. If straight, this measurement can be obtained with a rule.{'\n'}</Text>
+                <Text><Text style={styles.boldText}>SPI: </Text>{'\n'}SPI or Stitches Per Inch is a measure of how many holes you stitch per inch, with the equal conversion to milimeters. The SPI to millimetres is simple enough to find out by looking at your irons if they are modern.
 
                 If you are stitching at 7 stitches per inch (SPI), the stitch length will be 3.85mm, this is the distance from centre of hole to centre of hole.
                 If you are stitching at 10 SPI your Stitch Size will be 2.7mm. There is a guide on this app to work out the SPI from your irons. You can find this in the menu under 'SPI Converter'.{'\n'}</Text>

@@ -12,21 +12,28 @@ const HomePage = () => {
             <View style={styles.container}>
                 <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
                 <Text style={styles.title}>Calculate Thread Length When Saddle Stitching</Text>
-                <Text>Calculating the amount of thread you need when Saddle Stitching to be able to stitch a specific item correctly can be problematic, and if you get it wrong, disastrous.
+                <Text>Dread the thought of making a stitching blunder? Calculating thread requirements can be a treacherous task - a mere mistake could spell disaster!
                 {'\n'}
                 {'\n'}
-                    Advice that is often given ranges from x4 to x10 often with little consideration of what SPI is being used or the thickness of the item being stitched.
+                Announcing the game-changer for all hand stitchers - our revolutionary App!
+                {'\n'}
+                Tired of grappling with thread calculations and playing the risky 'Thread Chicken' game? Fear no more! With this powerful tool, you can bid farewell to uncertainties and confidently stitch your way to perfection.
                 {'\n'}
                 {'\n'}
-                    It seems to be mostly guesswork, which is never a good thing. So some years ago, I created a simple formula to help you avoid that most horrendous of games… ‘Thread Chicken’. Never Run Out Again!
-                    {'\n'}
-                    {'\n'}
-                    This is a much used, tried, tested and above all reliable method to help you with your stitching.
-                    {'\n'}
-                    {'\n'}
-                    It has been available on Nigel Armitage’s website for some time as a free download and still is.
-                    Now you have a new option, an actual calculator, one that will help you get the correct thread length, every time!
-                    All you need to do is to put in your numbers. Simply click on the menu on this app and choose whether to calculate by stitch length or number of holes</Text>
+                A battle-tested and reliable solution to all your stitching woes. Previously a downloadable resource, now you have a powerful new tool at your disposal - an actual App!
+                {'\n'}
+                This wonder will effortlessly calculate your thread needs, ensuring you never miss the mark again.
+                {'\n'}
+                No more guesswork - simply input your numbers and let the magic unfold. With just a few clicks, this app offers options to compute thread length based on either the length to be stitched or the hole count.
+                {'\n'}
+                Embrace the certainty and bid farewell to stitching guesswork!
+                {'\n'}
+                </Text>
+                <Text style={styles.italic}>I hope it helps
+                {'\n'}
+                {'\n'}
+                Nigel
+                </Text>
                 <Footer />
             </View>
         </ScrollView>

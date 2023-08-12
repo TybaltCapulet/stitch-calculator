@@ -13,6 +13,7 @@ const LengthCalculator = () => {
     const [itemThickness, setItemThickness] = useState('');
     const [finishThreadLength, setFinishThreadLength] = useState('');
     const [totalThreadLength, setTotalThreadLength] = useState('');
+    const [totalHoleCount, setTotalHoleCount] = useState('');
   
     const calculateLength = () => {
     if (!totalLength || !itemThickness) {
@@ -27,6 +28,7 @@ const LengthCalculator = () => {
       const hiddenLength = holeCount * parsedThickness;
       const threadLength = (parsedLength + hiddenLength + parsedFinishThreadLength) * 2;
       setTotalThreadLength(Math.round(threadLength).toString() + 'mm');
+      setTotalHoleCount(holeCount.toString());
     };
   
   
@@ -39,14 +41,14 @@ const LengthCalculator = () => {
             <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} keyboardType="numeric"/>
             <Text style={styles.text}> SPI (mm)</Text>
             <Picker style={Platform.OS === 'ios' ? styles.iosPicker : styles.androidPicker} selectedValue={stitchSize} onValueChange={setStitchSize}>
-              <Picker.Item label="5 (5.2mm)" value="5.2" />
-              <Picker.Item label="6 (4.3mm)" value="4.3" />
-              <Picker.Item label="7 (3.85mm)" value="3.85" />
-              <Picker.Item label="8 (3.38mm)" value="3.38" />
-              <Picker.Item label="9 (3mm)" value="3" />
-              <Picker.Item label="10 (2.7mm)" value="2.7" />
-              <Picker.Item label="11 (2.45mm)" value="2.45" />
-              <Picker.Item label="12 (2.3mm)" value="2.3" />
+              <Picker.Item style={styles.pickerfontsize} label="5 (5.2mm)" value="5.2" />
+              <Picker.Item style={styles.pickerfontsize} label="6 (4.3mm)" value="4.3" />
+              <Picker.Item style={styles.pickerfontsize} label="7 (3.85mm)" value="3.85" />
+              <Picker.Item style={styles.pickerfontsize} label="8 (3.38mm)" value="3.38" />
+              <Picker.Item style={styles.pickerfontsize} label="9 (3mm)" value="3" />
+              <Picker.Item style={styles.pickerfontsize} label="10 (2.7mm)" value="2.7" />
+              <Picker.Item style={styles.pickerfontsize} label="11 (2.45mm)" value="2.45" />
+              <Picker.Item style={styles.pickerfontsize} label="12 (2.3mm)" value="2.3" />
             </Picker>
             <Text style={styles.text}>Thickness of Item to be Stitched (mm)</Text>
             <TextInput style={styles.input} placeholder="Thickness of Item to be Stitched (mm)" value={itemThickness} onChangeText={setItemThickness} keyboardType="numeric"/>
@@ -57,6 +59,7 @@ const LengthCalculator = () => {
             </View>
             <Text style={styles.resultText}>Total Thread Length Needed:</Text>
             <Text style={styles.resultBox}> {totalThreadLength} </Text>
+            <Text style={styles.totalHoleCountCentering}>Total Hole Count: {totalHoleCount} </Text>
           </View>
           <Footer />
           <Text></Text>

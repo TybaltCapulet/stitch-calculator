@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
       borderWidth: 1,
       borderColor: 'black',
+      fontSize: 12,
     },
     buttonContainer: {
       flexDirection: 'column',
@@ -113,6 +114,15 @@ const styles = StyleSheet.create({
       fontSize: 16,
       flex: 1,
     },
+    italic: {
+      fontStyle: 'italic',
+    },
+    pickerfontsize: {
+      fontSize: 12,
+    },
+    totalHoleCountCentering: {
+      textAlign: 'center',
+    }
   });
 
 export default styles;

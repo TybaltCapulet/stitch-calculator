@@ -15,13 +15,11 @@ const HomePage = () => {
                 <Text style={styles.title}>Need some help?</Text>
                 <Text>Below are some definitions to help you use the calculator{'\n'}</Text>
                 <Text><Text style={styles.boldText}>Total Length of Stitching: </Text>{'\n'}The total length that you are planning to stitch, from the first hole, to the last. If straight, this measurement can be obtained with a rule.{'\n'}</Text>
-                <Text><Text style={styles.boldText}>SPI: </Text>{'\n'}SPI or Stitches Per Inch is a measure of how many holes you stitch per inch, with the equal conversion to milimeters. The SPI to millimetres is simple enough to find out by looking at your irons if they are modern.
-
-                If you are stitching at 7 stitches per inch (SPI), the stitch length will be 3.85mm, this is the distance from centre of hole to centre of hole.
-                If you are stitching at 10 SPI your Stitch Size will be 2.7mm. There is a guide on this app to work out the SPI from your irons. You can find this in the menu under 'SPI Converter'.{'\n'}</Text>
-                <Text><Text style={styles.boldText}>Hole Count:</Text> The number of holes in total you will be stitching, you can count this up by simply counting the number of holes you're planning to stitch.{'\n'}</Text>
-                <Text><Text style={styles.boldText}>Thickness of Item to be stitched: </Text>The total thickness of the leather items you are stitching together in milimeters, for example, if you are stitching two pieces of leather together that are 1.5mm each, the total inputted into the calculator would be 3mm. {'\n'}</Text>
-                <Text><Text style={styles.boldText}>Length of Finish Thread: </Text>The amount of thread to ensure you have enough to finish comfortably and do any backstitching. The calculator has a default of 200mm which is good for most applications, but you can change this to anything you want. {'\n'}</Text>            
+                <Text><Text style={styles.boldText}>SPI: 'Stitches per inch'</Text>{'\n'}This is a measurement used in saddle stitching to define how many stitches per inch you want. 6spi is a large stitch, 12spi is a fine stitch.{'\n'}Check out the SPI converter for more information.{'\n'}</Text>
+                <Text><Text style={styles.boldText}>Hole Count:</Text>{'\n'}If you are pre-pricking your leather and it is a complex shape, you can use your hole count to calculate the thread length.{'\n'}</Text>
+                <Text><Text style={styles.boldText}>Thickness of item to be stitched: </Text>{'\n'}This the total of all layers that are be stitched together.{'\n'}If you are stitching 4 layers of 1.5mm leather, your total will be 6mm, this is what you put into the calculator in the thickness box.{'\n'}</Text>
+                <Text><Text style={styles.boldText}>Length of finishing thread: </Text>{'\n'}At the end of the row of stitching, you will need enough thread left over to be able to finish your item with backstitches and the like.{'\n'}This is defaulted to 200mm for each thread. You can by all means add more.{'\n'}This is a good idea if you pierce the thread a lot and have to keep snipping off your needles to fix. This can shorten the thread.{'\n'}</Text>
+                <Text><Text style={styles.boldText}>Remember!</Text>{'\n'}This is an exact guide  designed to give you the minimum amount of thread you need to stitch. Always add a little more for safety and mistakes.{'\n'}</Text>          
                 <Footer />
                 <Text></Text>  
                 <Text></Text>   

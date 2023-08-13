@@ -13,7 +13,7 @@ const OpenChannelButton = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={handleOpenLink}>
-        <Text style={styles.buttonText}>Visit the Channel</Text>
+        <Text style={styles.buttonText}>Join the Channel</Text>
       </TouchableOpacity>
     </View>
   );

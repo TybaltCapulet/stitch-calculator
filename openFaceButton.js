@@ -13,7 +13,7 @@ const OpenFaceButton = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} onPress={handleOpenLink}>
-        <Text style={styles.buttonText}>View the Courses</Text>
+        <Text style={styles.buttonText}>Book a Course</Text>
       </TouchableOpacity>
     </View>
   );

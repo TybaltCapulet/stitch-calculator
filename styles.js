@@ -122,6 +122,9 @@ const styles = StyleSheet.create({
     },
     totalHoleCountCentering: {
       textAlign: 'center',
+    },
+    textLink: {
+      color: 'blue',
     }
   });
 

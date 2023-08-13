@@ -95,9 +95,8 @@ SPI Conversion chart
 Link to the courses (About us page)
 
 Need: 
-Allow app to be shared.
-Styling
-Dropdown instead of picker
+Few changes to About page including a new button, recompile and re-submit
+
 
 
 

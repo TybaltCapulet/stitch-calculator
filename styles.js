@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
       marginTop: 10,
     },
     input: {
-      height: 40,
+      height: 45,
       borderColor: 'gray',
       borderWidth: 1,
       marginBottom: 10,
       paddingLeft: 10,
       backgroundColor: 'white',
-      fontSize: 12,
+      fontSize: 19,
     },
     pickerContainer: {
       borderWidth: 1,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
       fontStyle: 'italic',
     },
     pickerfontsize: {
-      fontSize: 12,
+      fontSize: 14,
     },
     totalHoleCountCentering: {
       textAlign: 'center',

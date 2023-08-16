@@ -40,9 +40,9 @@ const HoleCalculator = () => {
             <TextInput style={styles.input} placeholder="Hole Count" value={holeCount} onChangeText={setHoleCount} keyboardType="numeric" />
             <Text style={styles.text}> SPI (mm)</Text>
             <Picker style={Platform.OS === 'ios' ? styles.iosPicker : styles.androidPicker} selectedValue={stitchSize} onValueChange={setStitchSize}>
+              <Picker.Item style={styles.pickerfontsize} label="5 (5.2mm)" value="5.2" />
               <Picker.Item style={styles.pickerfontsize} label="6 (4.3mm)" value="4.3" />
               <Picker.Item style={styles.pickerfontsize} label="7 (3.85mm)" value="3.85" />
-              <Picker.Item style={styles.pickerfontsize} label="5 (5.2mm)" value="5.2" />
               <Picker.Item style={styles.pickerfontsize} label="8 (3.38mm)" value="3.38" />
               <Picker.Item style={styles.pickerfontsize} label="9 (3mm)" value="3" />
               <Picker.Item style={styles.pickerfontsize} label="10 (2.7mm)" value="2.7" />

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
       flex: 1,
       paddingVertical: 25,
       paddingHorizontal: 40,
-      backgroundColor: 'aliceblue',
+      backgroundColor: '#C2D2C6',
       // borderColor: 'red',
       // borderWidth: 1,
     },
@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
       borderColor: 'black',
       borderWidth: 1,
       paddingBottom: 15,
-      marginBottom: 10
+      marginBottom: 10,
+      fontSize: 12
     },
     androidPicker: {
       height: 50,

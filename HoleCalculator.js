@@ -34,7 +34,7 @@ const HoleCalculator = () => {
     return (
         <ScrollView style={styles.container}>
           <View>
-            <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
+            <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
             <Text style={styles.title}>Thread Length Calculator</Text>
             <Text style={styles.text}>Hole Count (Number of Stitch Holes)</Text>
             <TextInput style={styles.input} placeholder="Hole Count" value={holeCount} onChangeText={setHoleCount} keyboardType="numeric" />

@@ -35,7 +35,7 @@ const LengthCalculator = () => {
     return (
         <ScrollView style={styles.container}>
           <View>
-            <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
+            <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
             <Text style={styles.title}>Thread Length Calculator</Text>
             <Text style={styles.text}>Total Length of Stitching (mm)</Text>
             <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} keyboardType="numeric"/>

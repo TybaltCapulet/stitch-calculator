@@ -10,7 +10,7 @@ const AboutPage = () => {
     return (
             <ScrollView style={styles.container}>
                 <View>
-                    <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
+                    <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
                     <Text style={styles.title}>About this app</Text>  
                     <Text>This app was created to help you calculate the necessary length of thread when saddle stitching, instead of relying on guesswork.{'\n'}</Text>
                     <Text>Nigel Armitage provided the original calculator on his website and sponsored the building of this app by Henry Rackley.{'\n'}</Text>

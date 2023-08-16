@@ -11,7 +11,7 @@ const Courses = () => {
   return (
         <ScrollView style={styles.container}>
             <View>
-                <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
+                <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
                 <Text>{'\n'}In addition to this App, Armitage Leather Ltd also offers both online and face to face courses</Text>
                 <Text style={styles.title}>Online Courses</Text>
                 <Text>Secrets from the Workshop is a renowned online platform for the discerning leatherworker, filmed and presented by Nigel Armitage of Armitage Leather Ltd, it contains a broad host of videos to help you improve your leatherwork in a step by step style.{'\n'}

@@ -12,7 +12,7 @@ const SPItoMMTable = () => {
   return (
     <ScrollView style={styles.container}>
     <View>
-    <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
+    <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
         <Text>{'\n'}The SPI to millimetres is simple enough to find if you are using the modern irons, they tend to be written on the tool. {'\n'}{'\n'}
         If you are stitching at 7 stitches per inch (SPI), the stitch length will be 3.85mm, this is the distance from centre of holeto centre of hole. {'\n'}
         If you are stitching at 10 SPI your Stitch Size will be 2.7mm.{'\n'}{'\n'}

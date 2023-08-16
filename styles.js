@@ -90,9 +90,10 @@ const styles = StyleSheet.create({
       color: 'green',
     },
     logo: {
-      width: 300,
-      height: 120,
+      // width: 400,
+      height: 93,
       alignSelf: 'center',
+      resizeMode: 'contain'
     },
     safeAreaViewStyles: {
         backgroundColor: 'aliceblue',

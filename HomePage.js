@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
         <ScrollView>
             <View style={styles.container}>
-                <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
+                <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
                 <Text style={styles.title}>Calculate Thread Length When Saddle Stitching</Text>
                 <Text>Dread the thought of making a stitching blunder? Calculating thread requirements can be a treacherous task - a mere mistake could spell disaster!
                 {'\n'}

@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
         <ScrollView style={styles.container}>
             <View>
-                <Image style={styles.logo} source={require("./assets/secretslogo.png")} />
+                <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
                 <Text style={styles.title}>Need some help?</Text>
                 <Text>Below are some definitions to help you use the calculator{'\n'}</Text>
                 <Text><Text style={styles.boldText}>Total Length of Stitching: </Text>{'\n'}The total length that you are planning to stitch, from the first hole, to the last. If straight, this measurement can be obtained with a rule.{'\n'}</Text>

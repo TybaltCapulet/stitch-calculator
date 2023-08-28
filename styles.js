@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'white',
       borderWidth: 1,
       borderColor: 'black',
-      fontSize: 12,
+      fontSize: 14,
     },
     buttonContainer: {
       flexDirection: 'column',
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
       fontStyle: 'italic',
     },
     pickerfontsize: {
-      fontSize: 14,
+      fontSize: 19,
     },
     totalHoleCountCentering: {
       textAlign: 'center',
@@ -130,7 +130,8 @@ const styles = StyleSheet.create({
     },
     sponsorsText: {
       fontSize: 12,
-      alignSelf: 'center'
+      alignSelf: 'center',
+      marginTop: 5
     }
   });
 

@@ -127,6 +127,10 @@ const styles = StyleSheet.create({
     },
     textLink: {
       color: 'blue',
+    },
+    sponsorsText: {
+      fontSize: 12,
+      alignSelf: 'center'
     }
   });
 

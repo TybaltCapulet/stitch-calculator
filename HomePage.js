@@ -4,6 +4,7 @@ import { View, Text, Image, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styles from './styles'
 import Footer from './Footer';
+import SponsorButton from './SponsorButton';
 
 
 const HomePage = () => {
@@ -34,6 +35,10 @@ const HomePage = () => {
                 {'\n'}
                 Nigel
                 </Text>
+                <Text style={styles.sponsorsText}> Sponsors of the app</Text>
+                <SponsorButton imageAsset={require('./assets/Crimson-Hides-Banner.jpg')} link="https://crimsonhides.com/" />
+                <SponsorButton imageAsset={require('./assets/Geo-Barnsley-Banner.jpg')} link="https://www.georgebarnsleyandsons.co.uk/" />
+                <SponsorButton imageAsset={require('./assets/Metropolitan-Leather.jpg')} link="https://www.metropolitanleather.com" />
                 <Footer />
             </View>
         </ScrollView>

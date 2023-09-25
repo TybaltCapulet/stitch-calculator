@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
       resizeMode: 'contain'
     },
     safeAreaViewStyles: {
-        backgroundColor: 'aliceblue',
+        backgroundColor: '#C2D2C6',
     },
     boldText: {
         fontWeight: 'bold',

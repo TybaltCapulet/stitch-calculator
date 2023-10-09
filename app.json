@@ -1,15 +1,15 @@
 {
   "expo": {
-    "name": "stitch-calculator",
+    "name": "Thread Length calculator",
     "slug": "stitch-calculator",
-    "version": "1.0.0",
+    "version": "1.0.6",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#b0e8fd"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,9 +21,10 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
-      "package": "com.hrackley.stitchcalculator"
+      "package": "com.hrackley.stitchcalculator",
+      "versionCode": 2
     },
     "web": {
       "favicon": "./assets/favicon.png"

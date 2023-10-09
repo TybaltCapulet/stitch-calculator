@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Linking, StyleSheet } from 'react-native'
 
 const OpenFaceButton = () => {
   const handleOpenLink = () => {
-    const url = 'https://secretsfromtheworkshop.com/';
+    const url = 'https://armitageleather.com/courses/';
 
     Linking.openURL(url).catch((error) => {
       console.log('Error opening link:', error);

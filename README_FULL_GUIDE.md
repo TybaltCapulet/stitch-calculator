@@ -23,6 +23,11 @@ You do **not** need to install anything globally for Expo. The old
 `npm install -g expo-cli` package is deprecated — the CLI now ships with the
 project, and you run it with `npx expo ...` from the project folder.
 
+The EAS Build CLI is not installed globally either. Run it with
+`npx eas-cli@latest ...`, which fetches the current version each time. Note that
+the npm package is called `eas-cli`, not `eas`: a plain `npx eas ...` will fail,
+because there is no such package and this project does not depend on the CLI.
+
 ## Getting Started
 
 1. **Download the code**
@@ -55,7 +60,7 @@ native modules (Reanimated 4, Gesture Handler, Screens) and runs on React
 Native's New Architecture, so a real build is the only faithful test:
 
 ```sh
-npx eas build --platform android --profile preview
+npx eas-cli@latest build --platform android --profile preview
 ```
 
 That produces an installable APK (the `preview` profile is set to internal
@@ -86,8 +91,8 @@ the phone.
 - **Releasing**: bump `version` and `android.versionCode` in `app.json`
   (`versionCode` must increase for every upload Google Play accepts), then:
   ```sh
-  npx eas build --platform android --profile production
-  npx eas submit --platform android
+  npx eas-cli@latest build --platform android --profile production
+  npx eas-cli@latest submit --platform android
   ```
 
 ### Known issue in SDK 56
@@ -135,7 +140,7 @@ and a new Play listing would be the only way forward.
 The key is held by EAS. Export it with:
 
 ```sh
-npx eas credentials
+npx eas-cli@latest credentials
 ```
 
 Choose **Android** → the **production** build profile → the keystore, and use
@@ -188,9 +193,9 @@ release permissions. See the
 
 ## Handover checklist
 
-- [ ] Keystore exported via `npx eas credentials` and delivered securely
+- [ ] Keystore exported via `npx eas-cli@latest credentials` and delivered securely
 - [ ] Expo project transferred, or new `owner` + `projectId` set in `app.json`
 - [ ] Google Play Console access or app transfer completed
 - [ ] GitHub repository transferred or forked to the new owner
-- [ ] New owner has run `npm install` and `npx eas build -p android --profile preview`
+- [ ] New owner has run `npm install` and `npx eas-cli@latest build -p android --profile preview`
       successfully on their own machine

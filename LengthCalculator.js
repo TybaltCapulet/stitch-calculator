@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, SafeAreaView, Image, ScrollView, Alert, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import styles from './styles';
+import styles, { PLACEHOLDER_COLOR } from './styles';
 import Footer from './Footer';
 import CustomButton from './CustomButton';
 
@@ -38,7 +38,7 @@ const LengthCalculator = () => {
             <Image style={styles.logo} source={require("./assets/armitageleatherlogo.png")} />
             <Text style={styles.title}>Thread Length Calculator</Text>
             <Text style={styles.text}>Total Length of Stitching (mm)</Text>
-            <TextInput style={styles.input} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} keyboardType="numeric"/>
+            <TextInput style={styles.input} placeholderTextColor={PLACEHOLDER_COLOR} placeholder="Total Length of Stitching (mm)" value={totalLength} onChangeText={setTotalLength} keyboardType="numeric"/>
             <Text style={styles.text}> SPI (mm)</Text>
             <Picker style={Platform.OS === 'ios' ? styles.iosPicker : styles.androidPicker} selectedValue={stitchSize} onValueChange={setStitchSize}>
               <Picker.Item style={styles.pickerfontsize} label="5 (5.2mm)" value="5.2" />
@@ -51,9 +51,9 @@ const LengthCalculator = () => {
               <Picker.Item style={styles.pickerfontsize} label="12 (2.3mm)" value="2.3" />
             </Picker>
             <Text style={styles.text}>Thickness of Item to be Stitched (mm)</Text>
-            <TextInput style={styles.input} placeholder="Thickness of Item to be Stitched (mm)" value={itemThickness} onChangeText={setItemThickness} keyboardType="numeric"/>
+            <TextInput style={styles.input} placeholderTextColor={PLACEHOLDER_COLOR} placeholder="Thickness of Item to be Stitched (mm)" value={itemThickness} onChangeText={setItemThickness} keyboardType="numeric"/>
             <Text style={styles.text}>Length of Finishing Thread (mm)</Text>
-            <TextInput style={styles.input} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200mm (default)" defaultValue="200" keyboardType="numeric"/>
+            <TextInput style={styles.input} placeholderTextColor={PLACEHOLDER_COLOR} value={finishThreadLength} onChangeText={setFinishThreadLength} placeholder="200mm (default)" defaultValue="200" keyboardType="numeric"/>
             <View style={styles.buttonContainer}>
               <CustomButton title="Calculate Based on Length" onPress={calculateLength} />
             </View>

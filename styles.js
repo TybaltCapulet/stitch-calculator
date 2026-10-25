@@ -1,6 +1,10 @@
 // styles.js
 import { StyleSheet, Platform } from 'react-native';
 
+// Placeholder text needs an explicit colour: without one Android resolves it from
+// the system theme, which makes it invisible on the white inputs in dark mode.
+const PLACEHOLDER_COLOR = '#8A8A8A';
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -22,6 +26,7 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       marginBottom: 10,
       paddingLeft: 10,
+      color: '#000',
       backgroundColor: 'white',
       fontSize: 19,
     },
@@ -50,7 +55,7 @@ const styles = StyleSheet.create({
       fontSize: 12
     },
     androidPicker: {
-      height: 50,
+      height: 64,
       color: 'black',
       backgroundColor: 'white',
       borderWidth: 1,
@@ -135,4 +140,5 @@ const styles = StyleSheet.create({
     }
   });
 
+export { PLACEHOLDER_COLOR };
 export default styles;

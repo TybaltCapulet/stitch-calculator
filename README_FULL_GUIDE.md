@@ -124,21 +124,21 @@ them will stop the new owner from shipping an update.
 
 ## 1. The Android signing key — do this first
 
-Google Play will only accept an update signed with the same key as the existing
-app. How serious losing that key is depends on one setting, so check before
-assuming the worst:
+Google Play will only accept an update signed with the same key as the version
+already published.
 
-- **If the app uses Play App Signing** (the normal arrangement for anything
-  published in recent years), Google holds the real signing key and the key in
-  EAS is only an *upload* key. A lost upload key can be reset by Google Play
-  support. Recoverable.
-- **If it does not**, the key in EAS *is* the signing key and Google holds no
-  copy. If it is lost the app can never be updated again, and a new package
-  name with a new Play listing would be the only way forward.
+**This app uses Play App Signing** (confirmed in the Play Console under
+**Test and release → Setup → App integrity → App signing**). That means Google
+holds the real signing key, and the keystore held in EAS is only an *upload*
+key. If the upload key is ever lost, Google Play support can reset it, so the
+app cannot be permanently orphaned.
 
-Check which applies in the Play Console under **Test and release → Setup →
-App integrity → App signing**. Either way, export the key and store it
-properly.
+Export and store it properly all the same: a reset takes days and paperwork.
+But treat a mistake here as recoverable, not terminal.
+
+For context, had the app *not* been enrolled in Play App Signing, the keystore
+would have been the app signing key itself with no copy held by Google, and
+losing it would have meant the app could never be updated again.
 
 The key is held by EAS. Export it with:
 
@@ -190,7 +190,11 @@ release permissions. See the
   app's permanent identity on Google Play. Changing it creates a completely new
   app: the existing listing, reviews and installed users do not carry over, and
   existing users get no update.
-- `ios.bundleIdentifier` is the same idea on the Apple side.
+- `ios.bundleIdentifier` is the same idea on the Apple side. The app is live on
+  the App Store, and the iOS app was moved to the new owner by App Store
+  Connect per-app transfer, so this identifier is in use and fixed too.
+- `ios.buildNumber` must increase for every submission to Apple, exactly as
+  `android.versionCode` must for Google Play. It currently reads `5`.
 - `android.versionCode` must only ever go **up**. Play rejects a build whose
   `versionCode` is equal to or lower than one already uploaded.
 

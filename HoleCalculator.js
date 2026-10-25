@@ -5,7 +5,6 @@ import { Picker } from '@react-native-picker/picker';
 import styles from './styles';
 import Footer from './Footer';
 import CustomButton from './CustomButton';
-import CustomPicker from './CustomPicker';
 
 const HoleCalculator = () => {
     const [totalLength, setTotalLength] = useState('');

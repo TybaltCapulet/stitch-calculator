@@ -125,8 +125,20 @@ them will stop the new owner from shipping an update.
 ## 1. The Android signing key — do this first
 
 Google Play will only accept an update signed with the same key as the existing
-app. If this key is lost, the app cannot be updated at all; a new package name
-and a new Play listing would be the only way forward.
+app. How serious losing that key is depends on one setting, so check before
+assuming the worst:
+
+- **If the app uses Play App Signing** (the normal arrangement for anything
+  published in recent years), Google holds the real signing key and the key in
+  EAS is only an *upload* key. A lost upload key can be reset by Google Play
+  support. Recoverable.
+- **If it does not**, the key in EAS *is* the signing key and Google holds no
+  copy. If it is lost the app can never be updated again, and a new package
+  name with a new Play listing would be the only way forward.
+
+Check which applies in the Play Console under **Test and release → Setup →
+App integrity → App signing**. Either way, export the key and store it
+properly.
 
 The key is held by EAS. Export it with:
 

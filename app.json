@@ -6,11 +6,6 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#000000"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -35,6 +30,17 @@
         "projectId": "0a9e48f5-46cb-488d-86c2-39f8630b1030"
       }
     },
-    "owner": "hrackley"
+    "owner": "hrackley",
+    "plugins": [
+      "expo-status-bar",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "cover",
+          "backgroundColor": "#000000"
+        }
+      ]
+    ]
   }
 }

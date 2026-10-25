@@ -1,7 +1,7 @@
 # Thread Length Calculator
 
 This app helps leatherworkers calculate thread length for stitching projects.
-Built with React Native and **Expo SDK 56**, built and submitted with EAS Build.
+Built with React Native and **Expo SDK 57**, built and submitted with EAS Build.
 
 - Android package name: `com.hrackley.stitchcalculator`
 - Expo account that owns the project: `hrackley`
@@ -9,9 +9,11 @@ Built with React Native and **Expo SDK 56**, built and submitted with EAS Build.
 
 ## Prerequisites
 
-- **Node.js 20.19.4 or newer.** Expo SDK 56 / React Native 0.85 will not run on
-  anything older. Node 22 LTS is a good choice — it matches the Node version on
-  Expo's own build servers. Get it from [nodejs.org](https://nodejs.org/).
+- **Node.js 20.19.4 or newer**, and on the Node 22 line, 22.13 or newer.
+  React Native 0.86 declares `^20.19.4 || ^22.13.0 || ^24.3.0 || >= 25.0.0`, so
+  Node 22.0 through 22.12 will *not* work. Node 22 LTS is a good choice — it
+  matches the Node version on Expo's own build servers. Get it from
+  [nodejs.org](https://nodejs.org/).
 - **npm 12 or newer** (`npm install -g npm@12`). Older npm (10.x) resolves
   `expo-asset` into `node_modules/expo/node_modules/` instead of hoisting it,
   and then Metro fails to start with "The required package `expo-asset` cannot
@@ -53,7 +55,7 @@ because there is no such package and this project does not depend on the CLI.
 For a quick look at JavaScript changes, the **Expo Go** app from the App Store
 or Google Play can load the project — run `npx expo start` and scan the QR code.
 Expo Go only ever supports one SDK version, so this works only while Expo Go is
-on SDK 56.
+on SDK 57.
 
 For anything you intend to trust, build the app instead. This project uses
 native modules (Reanimated 4, Gesture Handler, Screens) and runs on React
@@ -80,7 +82,7 @@ the phone.
   release; it catches missing peer dependencies and invalid `app.json` fields.
 - **Upgrade the Expo SDK**: one major version at a time, never several at once:
   ```sh
-  npx expo install expo@^57.0.0
+  npx expo install expo@^58.0.0
   npx expo install --fix
   npx expo-doctor
   ```
@@ -95,22 +97,11 @@ the phone.
   npx eas-cli@latest submit --platform android
   ```
 
-### Known issue in SDK 56
-
-`npx expo-doctor` reports that SDK 56 uses a version of Hermes V1 with a known
-memory regression that affects apps using Reanimated — which this app does, via
-the drawer navigation. It is fixed in Expo SDK 57 / React Native 0.86.2. If the
-app shows high memory use or is killed in the background, upgrading to SDK 57 is
-the fix:
-
-```sh
-npx expo install expo@^57.0.9 --fix
-```
-
 ## Troubleshooting
 
 - Clear the Metro cache: `npx expo start -c`
-- Check your Node version: `node --version` (must be 20.19.4+)
+- Check your Node version: `node --version` (see the supported range under
+  Prerequisites)
 - Metro can't find `expo-asset`: see the npm 12 note under Prerequisites.
 - A clean reinstall fixes most dependency oddities:
   ```sh

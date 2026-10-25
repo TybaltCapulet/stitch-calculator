@@ -1,112 +1,196 @@
 # Thread Length Calculator
 
-This app helps leatherworkers calculate thread length for stitching projects. Built with React Native and Expo SDK 51.
+This app helps leatherworkers calculate thread length for stitching projects.
+Built with React Native and **Expo SDK 56**, built and submitted with EAS Build.
+
+- Android package name: `com.hrackley.stitchcalculator`
+- Expo account that owns the project: `hrackley`
+- EAS project id: `0a9e48f5-46cb-488d-86c2-39f8630b1030`
 
 ## Prerequisites
 
-- **Node.js**: Download and install from [nodejs.org](https://nodejs.org/). This will also install npm (Node Package Manager).
-- **Git** (optional, for code updates): Download from [git-scm.com](https://git-scm.com/).
+- **Node.js 20.19.4 or newer.** Expo SDK 56 / React Native 0.85 will not run on
+  anything older. Node 22 LTS is a good choice — it matches the Node version on
+  Expo's own build servers. Get it from [nodejs.org](https://nodejs.org/).
+- **npm 12 or newer** (`npm install -g npm@12`). Older npm (10.x) resolves
+  `expo-asset` into `node_modules/expo/node_modules/` instead of hoisting it,
+  and then Metro fails to start with "The required package `expo-asset` cannot
+  be found". If you hit that, upgrade npm, delete `node_modules` and
+  `package-lock.json`, and run `npm install` again.
+- **Git** (optional, for code updates): [git-scm.com](https://git-scm.com/).
+
+You do **not** need to install anything globally for Expo. The old
+`npm install -g expo-cli` package is deprecated — the CLI now ships with the
+project, and you run it with `npx expo ...` from the project folder.
 
 ## Getting Started
 
 1. **Download the code**
-   - If you have Git: Open Terminal and run:
+   - If you have Git:
      ```sh
      git clone https://github.com/TybaltCapulet/stitch-calculator.git
      cd stitch-calculator
      ```
-   - Or download the ZIP from GitHub and extract it, then open Terminal and `cd` into the folder.
+   - Or download the ZIP from GitHub, extract it, and `cd` into the folder.
 
-2. **Install Expo CLI**
+2. **Install dependencies**
+   ```sh
+   npm install
+   ```
 
-     ```sh
-     npm install -g expo-cli
-     ```
-
-3. **Install dependencies**
-   - In the project folder, run:
-     ```sh
-     npm install
-     ```
-
-4. **Start the app**
-   - Run:
-     ```sh
-     npx expo start
-     ```
-   - This will open a browser window. You can run the app on your phone using the Expo Go app (iOS/Android) or in an emulator.
+3. **Start the app**
+   ```sh
+   npx expo start
+   ```
 
 ## Running on your phone
 
-- Download the **Expo Go** app from the App Store or Google Play.
-- Scan the QR code in your browser after running `npx expo start`.
+For a quick look at JavaScript changes, the **Expo Go** app from the App Store
+or Google Play can load the project — run `npx expo start` and scan the QR code.
+Expo Go only ever supports one SDK version, so this works only while Expo Go is
+on SDK 56.
+
+For anything you intend to trust, build the app instead. This project uses
+native modules (Reanimated 4, Gesture Handler, Screens) and runs on React
+Native's New Architecture, so a real build is the only faithful test:
+
+```sh
+npx eas build --platform android --profile preview
+```
+
+That produces an installable APK (the `preview` profile is set to internal
+distribution) and EAS gives you a link and QR code to install it directly on
+the phone.
 
 ## Making Changes
 
-- Edit the code in your favorite editor (e.g., VS Code).
-- Save changes and the app will reload automatically.
+- Edit the code in your favourite editor (e.g. VS Code).
+- Save, and the running app reloads automatically.
+- The two calculators live in `LengthCalculator.js` and `HoleCalculator.js`.
+  `styles.js` holds the shared styling.
 
 ## Maintaining the App
 
-- **Update dependencies**: Run `npm update` regularly.
-- **Upgrade Expo SDK**: Follow [Expo upgrade guide](https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/).
-- **Test on multiple devices**: Use Expo Go and emulators.
-- **Check for deprecated APIs**: Review [Expo SDK 51 release notes](https://blog.expo.dev/expo-sdk-51-7e5b6e7e7e7e).
+- **Check the project's health**: `npx expo-doctor`. Do this before every
+  release; it catches missing peer dependencies and invalid `app.json` fields.
+- **Upgrade the Expo SDK**: one major version at a time, never several at once:
+  ```sh
+  npx expo install expo@^57.0.0
+  npx expo install --fix
+  npx expo-doctor
+  ```
+  Read the release notes for each SDK you pass through, and check the app still
+  starts before moving to the next one. The notes are linked from the
+  [Expo upgrade guide](https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/),
+  and each SDK has a changelog at `https://expo.dev/changelog/sdk-<number>`.
+- **Releasing**: bump `version` and `android.versionCode` in `app.json`
+  (`versionCode` must increase for every upload Google Play accepts), then:
+  ```sh
+  npx eas build --platform android --profile production
+  npx eas submit --platform android
+  ```
+
+### Known issue in SDK 56
+
+`npx expo-doctor` reports that SDK 56 uses a version of Hermes V1 with a known
+memory regression that affects apps using Reanimated — which this app does, via
+the drawer navigation. It is fixed in Expo SDK 57 / React Native 0.86.2. If the
+app shows high memory use or is killed in the background, upgrading to SDK 57 is
+the fix:
+
+```sh
+npx expo install expo@^57.0.9 --fix
+```
 
 ## Troubleshooting
 
-- If you see errors, try:
-  - Clearing Expo cache: `npx expo start -c`
-  - Checking your Node.js version (should be current LTS).
+- Clear the Metro cache: `npx expo start -c`
+- Check your Node version: `node --version` (must be 20.19.4+)
+- Metro can't find `expo-asset`: see the npm 12 note under Prerequisites.
+- A clean reinstall fixes most dependency oddities:
+  ```sh
+  rm -rf node_modules package-lock.json
+  npm install
+  ```
 
 ## Useful Resources
+
 - [Expo Documentation](https://docs.expo.dev/)
-- [Expo Forums](https://forums.expo.dev/)
-
-## Contact
-
-For help, open an issue on GitHub or contact the project owner.
+- [EAS Build](https://docs.expo.dev/build/introduction/)
+- [Expo changelogs](https://expo.dev/changelog)
 
 ---
 
-## Setting Up Your Own Expo Account
+# Handover to a new owner
 
-1. Go to [expo.dev](https://expo.dev/) and sign up for a free account.
-2. After signing up, install the Expo CLI (see above) and log in from your terminal:
-   ```sh
-   npx expo login
-   ```
-3. You can now publish your own builds and manage projects from your Expo dashboard.
+Three separate things change hands. They are independent, and missing any one of
+them will stop the new owner from shipping an update.
 
-## Editing Build Variables
+## 1. The Android signing key — do this first
 
-- Build variables and configuration are set in `app.json` (or `app.config.js`).
-- Common variables to edit:
-  - `name`: The app name shown on devices.
-  - `slug`: The unique identifier for your app on Expo.
-  - `version`: The app version.
-  - `owner`: Your Expo username (set this to your own account for managed builds).
-  - `ios.bundleIdentifier` and `android.package`: Unique IDs for your app on each platform.
-  - `extra.eas.projectId`: Used for EAS Build; generate your own project ID from the Expo dashboard if needed.
+Google Play will only accept an update signed with the same key as the existing
+app. If this key is lost, the app cannot be updated at all; a new package name
+and a new Play listing would be the only way forward.
 
-### Example: Change Owner and Project ID
+The key is held by EAS. Export it with:
 
-1. In `app.json`, update:
-   ```json
-   "owner": "yourExpoUsername",
-   "extra": {
-     "eas": {
-       "projectId": "your-own-project-id"
-     }
-   }
-   ```
-2. You can generate a new project ID by creating a new project on [expo.dev](https://expo.dev/) and copying the ID from the dashboard.
+```sh
+npx eas credentials
+```
 
-## Building Your Own App
+Choose **Android** → the **production** build profile → the keystore, and use
+the download/export option. Store the keystore file and its passwords in a
+password manager and hand them to the new owner over a secure channel — not
+email or chat.
 
-- Use EAS Build for production builds:
-  ```sh
-  npx eas build --platform android
-  npx eas build --platform ios
-  ```
-- You may need to configure credentials for iOS/Android. Follow the prompts or see the [EAS Build docs](https://docs.expo.dev/build/introduction/).
+## 2. The Expo / EAS project
+
+Either transfer the existing project or let the new owner create their own.
+
+**Transfer it** (keeps build history and credentials): on
+[expo.dev](https://expo.dev/), open the project → **Project settings** →
+transfer the project to the new owner's account or organisation. The new owner
+needs an Expo account first. Then update `owner` in `app.json` to their account
+name.
+
+**Or start fresh under their account**: the new owner creates a project on
+expo.dev, then updates `app.json`:
+
+```json
+"owner": "theirExpoUsername",
+"extra": {
+  "eas": {
+    "projectId": "their-own-project-id"
+  }
+}
+```
+
+If they go this route they must still import the original keystore from step 1
+into their own EAS credentials, or Play will reject the upload.
+
+## 3. The Google Play Console listing
+
+Transferring the Play listing is a Google process, separate from GitHub and
+Expo. Either use Google Play's **app transfer** flow to move the app to the new
+owner's developer account, or add them as a user on the existing account with
+release permissions. See the
+[Play Console help on app transfers](https://support.google.com/googleplay/android-developer/answer/6230247).
+
+## What must not change
+
+- **`android.package` must stay `com.hrackley.stitchcalculator`.** This is the
+  app's permanent identity on Google Play. Changing it creates a completely new
+  app: the existing listing, reviews and installed users do not carry over, and
+  existing users get no update.
+- `ios.bundleIdentifier` is the same idea on the Apple side.
+- `android.versionCode` must only ever go **up**. Play rejects a build whose
+  `versionCode` is equal to or lower than one already uploaded.
+
+## Handover checklist
+
+- [ ] Keystore exported via `npx eas credentials` and delivered securely
+- [ ] Expo project transferred, or new `owner` + `projectId` set in `app.json`
+- [ ] Google Play Console access or app transfer completed
+- [ ] GitHub repository transferred or forked to the new owner
+- [ ] New owner has run `npm install` and `npx eas build -p android --profile preview`
+      successfully on their own machine

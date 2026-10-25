@@ -2,7 +2,7 @@
   "expo": {
     "name": "Thread Length calculator",
     "slug": "stitch-calculator",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -20,7 +20,7 @@
         "backgroundColor": "#000000"
       },
       "package": "com.hrackley.stitchcalculator",
-      "versionCode": 5
+      "versionCode": 6
     },
     "web": {
       "favicon": "./assets/favicon.png"

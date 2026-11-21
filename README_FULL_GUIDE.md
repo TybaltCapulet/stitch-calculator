@@ -4,7 +4,7 @@ This app helps leatherworkers calculate thread length for stitching projects.
 Built with React Native and **Expo SDK 57**, built and submitted with EAS Build.
 
 - Android package name: `com.hrackley.stitchcalculator`
-- Expo account that owns the project: `hrackley`
+- Expo account that owns the project: `stitch-calculator-transfer`
 - EAS project id: `0a9e48f5-46cb-488d-86c2-39f8630b1030`
 
 ## Prerequisites
